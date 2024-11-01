@@ -1,0 +1,38 @@
+.base_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  border: 1px solid rgb(233, 233, 233);
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+.base2_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  height: 200px;
+  border: 1px solid rgb(233, 233, 233);
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+.overview_base {
+  border: 1px solid rgb(233, 233, 233);
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+.base1_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}

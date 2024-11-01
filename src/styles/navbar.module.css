@@ -1,0 +1,100 @@
+.navbar {
+  width: 100%;
+  height: 65px;
+  top: 0%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #6b788e;
+  padding: 20px 60px 20px 80px;
+}
+
+.auth_navbar {
+  width: 100%;
+  height: 65px;
+  top: 0%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #6b788e;
+  padding: 20px 60px 20px 80px;
+  background-color: white;
+}
+
+.logo_side {
+  margin: 20px 0 0 45px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nlink:hover {
+  background-color: lightgray;
+}
+
+.logo {
+  display: flex;
+  margin-top: 7px;
+}
+
+.logo_text {
+  margin: 15px 0 0 5px;
+  font-size: 1.5rem;
+}
+
+.logo_main {
+  margin: -20px 0 0 -30px;
+  position: relative;
+}
+
+.logo_main_1 {
+  position: absolute;
+  width: 23.24px;
+  height: 3.58px;
+  left: 0px;
+  top: 27.82px;
+  background: #61cae9;
+  transform: rotate(-45deg);
+}
+
+.logo_main_2 {
+  position: absolute;
+  width: 23.24px;
+  height: 3.58px;
+  left: 3.96px;
+  top: 30.98px;
+  background: #7c66da;
+  transform: rotate(-45deg);
+}
+
+.logo_main_3 {
+  position: absolute;
+  width: 23.24px;
+  height: 3.58px;
+  left: 7.93px;
+  top: 34.14px;
+  background: #d1a5e3;
+  transform: rotate(-45deg);
+}
+
+.navbar_content {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+}
+
+.auth_navbar_content {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.nav_right {
+  display: flex;
+  gap: 10px;
+}

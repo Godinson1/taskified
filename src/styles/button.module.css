@@ -1,0 +1,28 @@
+.btn {
+  padding: 5px;
+  border-radius: 5px;
+  height: 45px;
+  color: white;
+  border: 1px solid #7c66da;
+  background-color: #7c66da;
+}
+
+.btn_large {
+  width: 200px;
+}
+
+.btn_small {
+  width: 100px;
+}
+
+.btn_outline {
+  padding: 5px;
+  height: 40px;
+  border: 1px solid #7c66da;
+  border-radius: 5px;
+}
+
+.btn:hover,
+.btn_outline:hover {
+  opacity: 0.9;
+}

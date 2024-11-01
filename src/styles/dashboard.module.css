@@ -1,0 +1,137 @@
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.dashboard_content {
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: rgb(198, 182, 206);
+}
+
+.purchase_container {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  width: 210px;
+  border-radius: 5px;
+  height: 300px;
+  background-color: white;
+}
+
+.purchase_image {
+  width: 100%;
+  max-height: 160px;
+  background-color: antiquewhite;
+}
+
+.base {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: rgb(78, 74, 74);
+}
+
+.purchase_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 4px;
+}
+
+.dashboard_container {
+  width: 100vw;
+  overflow: auto;
+}
+
+.dashboard_sidebar {
+  height: 100vh;
+  width: 18rem;
+  position: fixed;
+  overflow: auto;
+  background-color: white;
+}
+
+.dashboard_nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 10px;
+  top: 0%;
+  z-index: 1000;
+  background-color: white;
+}
+
+.dashboard_nav_active {
+  width: calc(100vw - 18rem);
+}
+
+.dashboard_nav_full {
+  width: 100vw;
+}
+
+.dashboard_child {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.dashboard_child_content {
+  margin-top: 100px;
+}
+
+.dashboard_child_top {
+  height: 120px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  top: 9%;
+  z-index: 500;
+}
+
+.dashboard_purchase_option {
+  height: 100%;
+  padding: 5px;
+}
+
+.dashboard_main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 20px;
+  background-color: rgb(254, 254, 255);
+}
+
+.dashboard_main_active {
+  margin-left: 18rem;
+}
+
+.dashboard_main_full {
+  margin-left: 0;
+}
+
+#dash_input {
+  width: 300;
+}
+
+@media screen and (max-width: 640px) {
+  .purchase_container {
+    width: 100%;
+  }
+
+  .btn_add,
+  #dash_input {
+    width: 100px;
+  }
+
+  .dashboard {
+    margin-top: 10px;
+  }
+}
