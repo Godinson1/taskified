@@ -1,4 +1,4 @@
-import { createContext, PropsWithChildren, useContext, useEffect, useState } from "react";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { jwtDecode, JwtPayload } from "jwt-decode";
 import { toast } from "react-toastify";
@@ -8,14 +8,14 @@ interface IJwtPayload extends JwtPayload {
 }
 
 const AuthContext = createContext({});
-const AuthProvider = ({ children }: PropsWithChildren) => {
+const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<any>(localStorage.getItem("jwt") || null);
   const router = useRouter();
 
   useEffect(() => {
     const token = localStorage.getItem("jwt");
     const validatedToken = validateToken(token as string);
-    if (validatedToken) setUser(validatedToken);
+    setUser(validatedToken);
   }, []);
 
   const login = (token: string) => {
@@ -28,18 +28,12 @@ const AuthProvider = ({ children }: PropsWithChildren) => {
   const validateToken = (token: string) => {
     if (token) {
       const decodedToken = jwtDecode<IJwtPayload>(token);
-
-      if (decodedToken.exp * 1000 < Date.now()) {
-        return null;
-      } else {
-        return decodedToken;
-      }
+      if (decodedToken.exp * 1000 < Date.now()) return null;
+      else return decodedToken;
     }
   };
 
-  const register = () => {
-    router.push("/login");
-  };
+  const register = () => router.push("/login");
 
   const logout = () => {
     localStorage.removeItem("jwt");

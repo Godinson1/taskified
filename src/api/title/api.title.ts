@@ -11,7 +11,6 @@ export interface ITitleData {
 export const addTitle = async (titleRequest: { title: string }) => {
   try {
     const response = await api.post("/title", titleRequest);
-    console.log("response-data", response);
     return response.data;
   } catch (error) {
     console.log("error", error);

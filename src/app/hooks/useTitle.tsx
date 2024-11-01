@@ -28,13 +28,14 @@ export const useTitle = () => {
   const addToTitles = async () => {
     if (!walletAddress) return toast.error("Please connect MetaMask");
     const data = await addTitle({ title: newTitle });
-    setTitles((prevState: ITitleData[]) => [...prevState, { title: data.title, createdAt: data.createdAt }]);
+    setTitles((prevState: ITitleData[]) => [...(prevState || []), { title: data.title, createdAt: data.createdAt }]);
     setNewTitle("");
   };
 
   return {
     titles,
     newTitle,
+    walletAddress,
     setNewTitle,
     addToTitles,
     getAllTitles,
